@@ -9,21 +9,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var platform_browser_1 = require('@angular/platform-browser');
-var app_component_1 = require('./app.component');
-var photo_module_1 = require('./photo/photo.module');
-var AppModule = (function () {
-    function AppModule() {
+var photo_component_1 = require('./photo.component');
+var PhotoModule = (function () {
+    function PhotoModule() {
     }
-    AppModule = __decorate([
+    PhotoModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, photo_module_1.PhotoModule],
-            declarations: [app_component_1.AppComponent],
-            bootstrap: [app_component_1.AppComponent]
+            declarations: [photo_component_1.PhotoComponent],
+            exports: [photo_component_1.PhotoComponent] // O que eu quero permitir que outros módulos utilizem.
         }), 
         __metadata('design:paramtypes', [])
-    ], AppModule);
-    return AppModule;
+    ], PhotoModule);
+    return PhotoModule;
 }());
-exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map
+exports.PhotoModule = PhotoModule;
+//# sourceMappingURL=photo.module.js.map
