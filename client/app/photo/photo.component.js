@@ -12,10 +12,19 @@ var core_1 = require('@angular/core');
 var PhotoComponent = (function () {
     function PhotoComponent() {
     }
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Object)
+    ], PhotoComponent.prototype, "title", void 0);
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Object)
+    ], PhotoComponent.prototype, "url", void 0);
     PhotoComponent = __decorate([
         core_1.Component({
+            moduleId: module.id,
             selector: 'photo',
-            templateUrl: './app/photo/photo.component.html'
+            templateUrl: './photo.component.html'
         }), 
         __metadata('design:paramtypes', [])
     ], PhotoComponent);
