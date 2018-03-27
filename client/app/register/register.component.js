@@ -9,9 +9,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var photo_component_1 = require('../photo/photo.component');
 var RegisterComponent = (function () {
     function RegisterComponent() {
+        this.photo = new photo_component_1.PhotoComponent();
     }
+    RegisterComponent.prototype.cadastrar = function () {
+        console.log(this.photo);
+    };
     RegisterComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
