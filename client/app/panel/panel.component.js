@@ -9,24 +9,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var platform_browser_1 = require('@angular/platform-browser');
-var http_1 = require('@angular/http');
-var app_component_1 = require('./app.component');
-var photo_module_1 = require('./photo/photo.module'); // module poderá ser exportado em outras aplicações
-var panel_module_1 = require('./panel/panel.module');
-require('rxjs/add/operator/map');
-var AppModule = (function () {
-    function AppModule() {
+var PanelComponent = (function () {
+    function PanelComponent() {
     }
-    AppModule = __decorate([
-        core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, photo_module_1.PhotoModule, http_1.HttpModule, panel_module_1.PanelModule],
-            declarations: [app_component_1.AppComponent],
-            bootstrap: [app_component_1.AppComponent]
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', String)
+    ], PanelComponent.prototype, "title", void 0);
+    PanelComponent = __decorate([
+        core_1.Component({
+            moduleId: module.id,
+            selector: 'panel',
+            templateUrl: './panel.component.html'
         }), 
         __metadata('design:paramtypes', [])
-    ], AppModule);
-    return AppModule;
+    ], PanelComponent);
+    return PanelComponent;
 }());
-exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map
+exports.PanelComponent = PanelComponent;
+//# sourceMappingURL=panel.component.js.map
