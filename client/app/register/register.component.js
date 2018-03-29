@@ -9,13 +9,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var photo_component_1 = require('../photo/photo.component');
+var foto_component_1 = require('../foto/foto.component');
+var http_1 = require('@angular/http');
 var RegisterComponent = (function () {
-    function RegisterComponent() {
-        this.photo = new photo_component_1.PhotoComponent();
+    function RegisterComponent(http) {
+        this.foto = new foto_component_1.FotoComponent();
+        this.http = http;
     }
-    RegisterComponent.prototype.cadastrar = function () {
-        console.log(this.photo);
+    RegisterComponent.prototype.cadastrar = function (event) {
+        var _this = this;
+        event.preventDefault();
+        console.log(this.foto);
+        var headers = new http_1.Headers();
+        headers.append('Content-type', 'application/json');
+        this.http
+            .post('v1/fotos', JSON.stringify(this.foto), { headers: headers })
+            .subscribe(function () {
+            _this.foto = new foto_component_1.FotoComponent();
+            console.log("Foto salva com sucesso!");
+        }), function (erro) { return console.log(erro); };
     };
     RegisterComponent = __decorate([
         core_1.Component({
@@ -23,7 +35,7 @@ var RegisterComponent = (function () {
             selector: 'register',
             templateUrl: './register.component.html'
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [http_1.Http])
     ], RegisterComponent);
     return RegisterComponent;
 }());

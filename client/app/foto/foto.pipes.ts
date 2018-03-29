@@ -1,5 +1,5 @@
 import {Pipe, PipeTransform} from '@angular/core';
-import {PhotoComponent} from './photo.component';
+import {PhotoComponent} from './foto.component';
 
 @Pipe({
   name: 'titleFilter'
@@ -8,6 +8,6 @@ import {PhotoComponent} from './photo.component';
 export class TitleFilter implements PipeTransform {
   transform(photos: PhotoComponent[], typed: string) {
     typed = typed.toLowerCase();
-    return photos.filter(photo => photo.title.toLowerCase().includes(typed));
+    return photos.filter(foto => foto.titulo.toLowerCase().includes(typed));
   }
 }

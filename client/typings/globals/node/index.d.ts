@@ -359,7 +359,7 @@ declare namespace NodeJS {
         };
         kill(pid: number, signal?: string | number): void;
         pid: number;
-        title: string;
+        titulo: string;
         arch: string;
         platform: string;
         memoryUsage(): MemoryUsage;

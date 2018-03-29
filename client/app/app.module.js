@@ -14,16 +14,17 @@ var http_1 = require('@angular/http');
 var app_component_1 = require('./app.component');
 var list_component_1 = require('./list/list.component');
 var register_component_1 = require('./register/register.component'); // component será utilizado apenas nessa aplicação específica
-var photo_module_1 = require('./photo/photo.module'); // module poderá ser exportado em outras aplicações
-var panel_module_1 = require('./panel/panel.module');
+var foto_module_1 = require('./foto/foto.module'); // module poderá ser exportado em outras aplicações
+var painel_module_1 = require('./painel/painel.module');
 var app_routes_1 = require('./app.routes');
+var forms_1 = require('@angular/forms');
 require('rxjs/add/operator/map');
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, photo_module_1.PhotoModule, http_1.HttpModule, panel_module_1.PanelModule, app_routes_1.routing],
+            imports: [platform_browser_1.BrowserModule, foto_module_1.FotoModule, http_1.HttpModule, painel_module_1.PainelModule, forms_1.FormsModule, app_routes_1.routing],
             declarations: [app_component_1.AppComponent, register_component_1.RegisterComponent, list_component_1.ListComponent],
             bootstrap: [app_component_1.AppComponent]
         }), 

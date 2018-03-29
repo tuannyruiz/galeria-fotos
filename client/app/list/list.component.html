@@ -20,8 +20,8 @@
   </div>
 
   <div class="row">
-    <panel *ngFor="let photo of photos | titleFilter: filterText.value" [title]="photo.titulo" class="col-md-2">
-      <photo [url]="photo.url" [title]="photo.titulo"></photo>
-    </panel>
+    <painel *ngFor="let foto of photos | titleFilter: filterText.value" [titulo]="foto.titulo" class="col-md-2">
+      <foto [url]="foto.url" [titulo]="foto.titulo"></foto>
+    </painel>
   </div>
 </div>

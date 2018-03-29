@@ -9,18 +9,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var panel_component_1 = require('./panel.component');
-var PanelModule = (function () {
-    function PanelModule() {
+var TitleFilter = (function () {
+    function TitleFilter() {
     }
-    PanelModule = __decorate([
-        core_1.NgModule({
-            declarations: [panel_component_1.PanelComponent],
-            exports: [panel_component_1.PanelComponent]
+    TitleFilter.prototype.transform = function (photos, typed) {
+        typed = typed.toLowerCase();
+        return photos.filter(function (foto) { return foto.titulo.toLowerCase().includes(typed); });
+    };
+    TitleFilter = __decorate([
+        core_1.Pipe({
+            name: 'titleFilter'
         }), 
         __metadata('design:paramtypes', [])
-    ], PanelModule);
-    return PanelModule;
+    ], TitleFilter);
+    return TitleFilter;
 }());
-exports.PanelModule = PanelModule;
-//# sourceMappingURL=panel.module.js.map
+exports.TitleFilter = TitleFilter;
+//# sourceMappingURL=foto.pipes.js.map

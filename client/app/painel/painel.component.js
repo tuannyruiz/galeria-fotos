@@ -9,20 +9,22 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var TitleFilter = (function () {
-    function TitleFilter() {
+var PainelComponent = (function () {
+    function PainelComponent() {
     }
-    TitleFilter.prototype.transform = function (photos, typed) {
-        typed = typed.toLowerCase();
-        return photos.filter(function (photo) { return photo.title.toLowerCase().includes(typed); });
-    };
-    TitleFilter = __decorate([
-        core_1.Pipe({
-            name: 'titleFilter'
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', String)
+    ], PainelComponent.prototype, "titulo", void 0);
+    PainelComponent = __decorate([
+        core_1.Component({
+            moduleId: module.id,
+            selector: 'painel',
+            templateUrl: './painel.component.html'
         }), 
         __metadata('design:paramtypes', [])
-    ], TitleFilter);
-    return TitleFilter;
+    ], PainelComponent);
+    return PainelComponent;
 }());
-exports.TitleFilter = TitleFilter;
-//# sourceMappingURL=photo.pipes.js.map
+exports.PainelComponent = PainelComponent;
+//# sourceMappingURL=painel.component.js.map
