@@ -12,9 +12,9 @@ var core_1 = require('@angular/core');
 var TitleFilter = (function () {
     function TitleFilter() {
     }
-    TitleFilter.prototype.transform = function (photos, typed) {
+    TitleFilter.prototype.transform = function (fotos, typed) {
         typed = typed.toLowerCase();
-        return photos.filter(function (foto) { return foto.titulo.toLowerCase().includes(typed); });
+        return fotos.filter(function (foto) { return foto.titulo.toLowerCase().includes(typed); });
     };
     TitleFilter = __decorate([
         core_1.Pipe({

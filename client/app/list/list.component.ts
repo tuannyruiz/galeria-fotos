@@ -8,13 +8,13 @@ import {Http} from '@angular/http';
 })
 
 export class ListComponent {
-  photos: Object[] = [];
+  fotos: Object[] = [];
   constructor(http: Http) {
     http
     .get('v1/fotos')
     .map(res => res.json())
-    .subscribe(photos => {
-      this.photos = photos;
+    .subscribe(fotos => {
+      this.fotos = fotos;
     }, erro => console.log(erro));
   }
 }

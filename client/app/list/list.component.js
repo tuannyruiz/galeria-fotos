@@ -13,12 +13,12 @@ var http_1 = require('@angular/http');
 var ListComponent = (function () {
     function ListComponent(http) {
         var _this = this;
-        this.photos = [];
+        this.fotos = [];
         http
             .get('v1/fotos')
             .map(function (res) { return res.json(); })
-            .subscribe(function (photos) {
-            _this.photos = photos;
+            .subscribe(function (fotos) {
+            _this.fotos = fotos;
         }, function (erro) { return console.log(erro); });
     }
     ListComponent = __decorate([
