@@ -7,11 +7,11 @@ import {RegisterComponent} from './register/register.component'; // component se
 import {FotoModule} from './foto/foto.module'; // module poderá ser exportado em outras aplicações
 import {PainelModule} from './painel/painel.module';
 import {routing} from './app.routes';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import 'rxjs/add/operator/map';
 
 @NgModule({
-  imports: [BrowserModule, FotoModule, HttpModule, PainelModule, FormsModule, routing],
+  imports: [BrowserModule, FotoModule, HttpModule, PainelModule, FormsModule, ReactiveFormsModule, routing],
   declarations: [AppComponent, RegisterComponent, ListComponent],
   bootstrap: [AppComponent]
 })
